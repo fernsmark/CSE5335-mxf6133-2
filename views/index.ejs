@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="myApp" >
+
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/animate.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    </head>
+    <body>
+        <h1><center>CSE5335 mxf6133 Project-2</center></h1>
+        <h4><center>Click <b>Submit</b> to display information about some Marvel Characters</center></h4>
+        <br>
+        <div ng-controller="marvelCtrl" class="tab">
+
+            <div class="wrapper">
+                <button class="btn btn-info btn-lg" ng-click="submit()">Submit</button>
+                <h5>Total number of AJAX requests : {{i}}</h5>
+                <br>
+            </div>
+
+                <div>
+                    <table class="table table-striped" ng-if='characters.length > 0'>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Alignment</th>
+                                <th>Gender</th>
+                                <th>First Appearance</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            <tr ng-repeat="character in characters" class="animation">
+                                <td>{{character.id}}</td>
+                                <td>{{character.name}}</td>
+                                <td>{{character.ALIGN}}</td>
+                                <td>{{character.SEX}}</td>
+                                <td>{{character.Year}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <script src="/controller/controller.js"></script>
+
+    </body>
+</html>

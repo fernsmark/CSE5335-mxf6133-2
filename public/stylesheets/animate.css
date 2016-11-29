@@ -1,0 +1,36 @@
+/*
+ * Created by Mark on 11/22/2016.
+ * Reference: https://docs.angularjs.org/guide/animations#!
+ */
+
+h2 {
+    margin-bottom:0;
+    margin-top: 0;
+}
+.wrapper {
+    text-align: center;
+}
+.tab {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+.animation.ng-enter, .animation.ng-leave {
+    -webkit-transition: 1s;
+}
+.animation.ng-enter {
+    opacity: 0;
+}
+.animation.ng-leave {
+    opacity: 1;
+}
+.animation.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+.animation.ng-leave.ng-leave-active{
+    opacity: 0;
+}
